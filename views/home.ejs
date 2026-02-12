@@ -8,8 +8,16 @@
 </head>
 
 <body>
-    <h1>Hello from EJS file <%= name %>
-    </h1>
+
+    <% if(numbers.length> 0) {%>
+        <%for (let n=0; n<numbers.length ; n++){ %>
+            <h5>
+                <%=numbers[n]%>
+            </h5>
+            <%}%>
+                <% } else {%>
+                    <h1>No Data found</h1>
+                    <% }%>
 </body>
 
 </html>
