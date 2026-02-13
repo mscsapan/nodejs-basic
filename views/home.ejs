@@ -9,7 +9,7 @@
 
 <body>
 
-    <% if(numbers.length> 0) {%>
+    <!-- <% if(numbers.length> 0) {%>
         <%for (let n=0; n<numbers.length ; n++){ %>
             <h5>
                 <%=numbers[n]%>
@@ -17,7 +17,23 @@
             <%}%>
                 <% } else {%>
                     <h1>No Data found</h1>
-                    <% }%>
+                    <% }%> -->
+
+
+    <% let num=[1,2,3,4] %>
+        <% let result=0%>
+
+            <%for (let i of num) {%>
+                <% result +=i%>
+                    <h6>
+                        <%= i %>
+                    </h6>
+                    <%}%>
+
+                        <%= result %>
+
+
+
 </body>
 
 </html>
