@@ -1,14 +1,10 @@
 import express from "express";
+import { getNumbers, getProfile } from '../controllers/profile-controller.js';
 
 const routes = express.Router();
 
-routes.get('/', (req, res) => {
-    const numbers = [1, 2, 3, 4.5, 6, 7, 8, 9, 100];
-    res.render('home', { numbers: numbers })
-});
+routes.get('/', getNumbers);
 
-routes.get('/profile', (req, res) => {
-    res.render('profile', { name: 'Mohammad Ali' });
-});
+routes.get('/profile', getProfile);
 
 export default routes;
